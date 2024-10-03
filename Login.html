@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('image.jpg'); /* Replace with your image URL or path */
+            background-size: cover; /* Ensures the image covers the entire background */
+            background-position: center; /* Centers the image */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .gradient-text {
+            background: linear-gradient(
+                45deg, 
+                #f09433,  /* Orange */
+                #e6683c,  /* Orange-Red */
+                #dc2743,  /* Red */
+                #cc2366,  /* Pink */
+                #bc1888   /* Purple */
+            );
+            -webkit-background-clip: text; /* Makes the gradient visible in text */
+            color: transparent; /* Hides the default text color */
+        }
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+            border: 1px solid #dbdbdb;
+            padding: 40px;
+            width: 350px;
+            text-align: center;
+            border-radius: 10px; /* Rounded corners for the container */
+        }
+        .login-container h1 {
+            font-family: 'Billabong', cursive;
+            font-size: 50px;
+            color: #262626;
+        }
+        .login-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #dbdbdb;
+            border-radius: 5px;
+            background-color: #fafafa;
+        }
+        .login-container button {
+            width: 70%;
+            padding: 10px;
+            background-color: #da4883;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .forgot-password {
+            margin-top: 20px;
+        }
+        .forgot-password a {
+            color: #00376b;
+            text-decoration: none;
+            font-size: 12px;
+        }
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+        .spaced {
+            margin: 10px; /* Adds space outside the element */
+            padding: 10px; /* Adds space inside the element */
+        }
+        .spaced1 {
+            margin: 5px; /* Adds space outside the element */
+            padding: 5px;
+        }
+        .spaced2 {
+            margin: 3px;
+            padding: 3px;
+        }
+    </style>
+    <script>
+        function login() {
+            // Get username and password values
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            // Log the values to the console
+            console.log('Username:', username);
+            console.log('Password:', password);
+        }
+    </script>
+</head>
+<body>
+
+    <div class="login-container">
+        <img src="./insta.png" width="50" height="50">
+        <p class="spaced"></p>
+        <input type="text" id="username" placeholder="Username" required><br>
+        <p class="spaced2"></p>
+        <input type="password" id="password" placeholder="Password" required><br>
+        <p class="spaced1"></p>
+        <button onclick="login()">Log In</button> 
+        <p class="spaced1"></p>
+        <div class="forgot-password">
+            <a href="#">Forgot password?</a>
+        </div>
+    </div>
+
+</body>
+</html>
